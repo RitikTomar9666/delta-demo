@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap");
+
+.authPage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d;
+  background-image: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(16, 163, 127, 0.12) 0%,
+    transparent 60%
+  );
+  font-family: "Sora", sans-serif;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 400px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.authLogo {
+  margin-bottom: 1.5rem;
+}
+
+.logoCircle {
+  height: 52px;
+  width: 52px;
+  background: linear-gradient(135deg, #10a37f, #0d8f6f);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(16, 163, 127, 0.35);
+}
+
+.authTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ececec;
+  margin: 0 0 0.4rem 0;
+  text-align: center;
+}
+
+.authSubtitle {
+  font-size: 0.85rem;
+  color: rgba(236, 236, 236, 0.45);
+  margin: 0 0 1.8rem 0;
+  text-align: center;
+}
+
+.authError {
+  width: 100%;
+  background: rgba(220, 50, 50, 0.12);
+  border: 1px solid rgba(220, 50, 50, 0.3);
+  color: #ff6b6b;
+  font-size: 0.82rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.authFields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.inputGroup label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(236, 236, 236, 0.65);
+}
+
+/* Override global input styles inside auth card */
+.authCard input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #ececec;
+  font-family: "Sora", sans-serif;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+.authCard input:focus {
+  outline: none;
+  border-color: rgba(16, 163, 127, 0.6);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.authCard input::placeholder {
+  color: rgba(236, 236, 236, 0.22);
+}
+
+.authBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #10a37f;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+}
+
+.authBtn:hover:not(:disabled) {
+  background: #0d8f6f;
+}
+.authBtn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+.authBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.authSpinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.authSwitch {
+  margin-top: 1.4rem;
+  font-size: 0.82rem;
+  color: rgba(236, 236, 236, 0.4);
+  text-align: center;
+}
+
+.authSwitch a {
+  color: #10a37f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.authSwitch a:hover {
+  text-decoration: underline;
+}
